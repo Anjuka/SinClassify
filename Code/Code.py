@@ -210,7 +210,7 @@ def predict(txtfileName):
         print('Prediction starts')
         out = model.predict(predict)
         out = sum(out) / len(out)
-        finalOut = (out > 0.5).astype(int)
+        finalOut = (out > 0.4).astype(int)
         print(out)
         if finalOut[0] == 0:
             print('Politics')
